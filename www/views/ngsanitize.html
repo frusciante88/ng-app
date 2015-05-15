@@ -1,0 +1,11 @@
+<div class="header">
+	<h1>ngSanitize</h1>
+	<h2>Utile quando si vede iniettare del codice html contenente js potenzialmente dannoso</h2>
+	<h2>Questo permette di sottoporre a controllo il codice iniettato, mente ultilizzando questo modulo è
+		possibile bypassare la "sanificazione" del codice HTML
+	</h2>
+</div>
+<div class="content">
+	<p ng-bind-html="html"></p>
+	<div ng-bind-html="withoutSanitize()"></div>
+</div>

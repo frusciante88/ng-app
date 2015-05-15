@@ -1,5 +1,5 @@
 angular
-	.module('ngEng', ['ngRoute'])
+	.module('ngEng', ['ngRoute', 'ngSanitize'])
 	.config(function ($routeProvider, $locationProvider) {
 		
 		$routeProvider
