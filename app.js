@@ -19,7 +19,7 @@ app.get('/', function(req, res){
     }
   };
 
-  var fileName = 'home.html';
+  var fileName = 'index.html';
   res.sendFile(fileName, options, function (err) {
     if (err) {
       console.log(err);
