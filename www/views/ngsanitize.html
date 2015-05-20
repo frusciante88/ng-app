@@ -8,4 +8,8 @@
 <div class="content">
 	<p ng-bind-html="html"></p>
 	<div ng-bind-html="withoutSanitize()"></div>
+	<button ng-click="test()">Clicca</button>	
+	<textarea ng-model="htmlBody"></textarea>
+	<div ng-bind-html="htmlBody"></textarea>
+	<div ng-include='link'></div>
 </div>

@@ -1,7 +1,9 @@
 angular
 	.module('ngEng', ['ngRoute', 'ngSanitize'])
-	.config(function ($routeProvider, $locationProvider) {
+	.config(function ($routeProvider, $locationProvider, $sceDelegateProvider) {
 		
+        $sceDelegateProvider.resourceUrlWhitelist(['self']);
+        
 		$routeProvider
             .when('/', {
                 templateUrl: '/www/views/index.html',
