@@ -1,15 +1,12 @@
 <div class="header">
-	<h1>ngSanitize</h1>
-	<h2>Utile quando si vede iniettare del codice html contenente js potenzialmente dannoso</h2>
-	<h2>Questo permette di sottoporre a controllo il codice iniettato, mente ultilizzando questo modulo è
-		possibile bypassare la "sanificazione" del codice HTML
-	</h2>
+	<h1>$sce</h1>
+
 </div>
 <div class="content">
-	<p ng-bind-html="html"></p>
-	<div ng-bind-html="withoutSanitize()"></div>
-	<button ng-click="test()">Clicca</button>	
 	<textarea ng-model="htmlBody"></textarea>
-	<div ng-bind-html="htmlBody"></textarea>
-	<div ng-include='link'></div>
+	<div ng-bind-html="htmlBody"></div>
+	<pre ng-bind-html="trustHtml"></pre>
+	<pre ng-bind-html="trustHtmlJS"></pre>
+
+	<div ng-include="linkInclude"></div>
 </div>
