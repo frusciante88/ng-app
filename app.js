@@ -1,13 +1,19 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
 
 var app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use(cookieParser('Some secret?'));
 // Risorse statiche
 app.use('/www', express.static(__dirname + '/www'));
+
+app.use('/getRequest', function(req, res){
+    console.log(req.headers);
+    console.log(req.headers['X-CSRFToken']);
+});
 
 app.get('/', function(req, res){
     var options = {
@@ -18,6 +24,9 @@ app.get('/', function(req, res){
         'x-sent': true
     }
   };
+
+    res.cookie('XSRF-TOKEN', 'PIPPO', { maxAge: 900000 });
+    res.cookie('NGAPP', 'NGAPP', { maxAge: 900000 });
 
   var fileName = 'index.html';
   res.sendFile(fileName, options, function (err) {

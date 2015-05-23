@@ -1,6 +1,6 @@
 angular
-	.module('ngEng')
-	.controller('ngsanitizeCtrl', ['$scope', '$sce', '$window', function($scope, $sce, $window) {
+	.module('ngApp')
+	.controller('securityCtrl', ['$scope', '$sce', '$window', function($scope, $sce, $window) {
 
 		$scope.htmlBody = '<h1 style="color:blue" onclick="alert(\'ciao\');">test</h1>';
 
