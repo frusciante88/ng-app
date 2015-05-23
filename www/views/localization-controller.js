@@ -6,4 +6,7 @@ angular
             $translate.use(lan);
         };
 
+        $scope.Oggi  = new Date();
+        $scope.Moneta = 123.45;
+
     }]);
